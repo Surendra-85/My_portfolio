@@ -2,7 +2,7 @@ export default function TechnicalSkills() {
   const skills = [
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
-    { name: "Java Script", icon: <SiJavascript className="text-yellow-400" /> },
+    { name: "Java Script", icon: <SiJavascript className="text-yellow-400 " /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
     { name: "React.js", icon: <FaReact className="text-sky-400" /> },
     { name: "Redux Toolkit", icon: <SiRedux className="text-purple-500" /> },
@@ -41,12 +41,16 @@ export default function TechnicalSkills() {
 
       {/* Skills Grid */}
       <div
-        className="
-        max-w-6xl mx-auto
-        grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
-        gap-4 sm:gap-6 md:gap-8
-        px-4 sm:px-6"
-      >
+     className="
+       max-w-6xl mx-auto
+       grid grid-cols-1
+       sm:grid-cols-2
+       md:grid-cols-3
+       lg:grid-cols-4
+       gap-4 sm:gap-6 md:gap-8
+       px-4 sm:px-6
+     "
+   >
         {skills.map((skill, index) => (
           <div
             key={index}
