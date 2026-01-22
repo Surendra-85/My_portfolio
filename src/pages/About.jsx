@@ -79,9 +79,7 @@ export default function About() {
                   {exp.role}
                 </h3>
 
-                <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-5">
-                  {exp.company}
-                </p>
+                
 
                 <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
                   {exp.points.map((point, i) => (
