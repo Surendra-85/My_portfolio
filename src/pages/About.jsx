@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    period: "SEPT 2023 – PRESENT",
+    period: "SEPT 2024 – PRESENT",
     role: "Full Stack Developer",
-    company: "Difmo Pvt. Ltd.",
     points: [
       "Contributed to complex web and mobile apps using React.js, Next.js, React Native, and Flutter.",
       "Notable projects include Jane CJ and Coding World.",
@@ -14,9 +13,8 @@ const experiences = [
     ],
   },
   {
-    period: "FEB 2023 – AUG 2023",
+    period: "FEB 2024 – AUG 2025",
     role: "Full Stack Developer Intern",
-    company: "Difmo Pvt. Ltd.",
     points: [
       "Developed full-stack web applications using the MERN stack.",
       "Built responsive frontends with React.js and Tailwind CSS.",
