@@ -21,7 +21,9 @@ import {
   SiNpm,
 } from "react-icons/si";
 
-export default function TechnicalSkills() {
+import { motion } from "framer-motion";
+
+export default function Skills() {
   const skills = [
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
@@ -49,6 +51,7 @@ export default function TechnicalSkills() {
 
   return (
     <section className="py-28 bg-gradient-to-b from-white to-slate-50 dark:from-gray-950 dark:to-gray-900">
+      
       {/* Heading */}
       <div className="text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
@@ -59,21 +62,38 @@ export default function TechnicalSkills() {
       </div>
 
       {/* Skills Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
-
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          visible: {
+            transition: { staggerChildren: 0.08 },
+          },
+        }}
+        className="max-w-6xl mx-auto
+        grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+        gap-8 px-6"
+      >
         {skills.map((skill, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={{
+              hidden: { opacity: 0, y: 30, scale: 0.95 },
+              visible: { opacity: 1, y: 0, scale: 1 },
+            }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            whileHover={{ scale: 1.03 }}
             className="group relative flex items-center gap-4
             rounded-2xl p-6
             bg-white/80 dark:bg-gray-800/70
             backdrop-blur-xl
             border border-gray-200 dark:border-gray-700
             shadow-md hover:shadow-xl
-            transition-all duration-300
-            hover:-translate-y-1"
+            transition-all duration-300"
           >
-            {/* Hover glow */}
+            {/* Glow */}
             <div
               className="absolute inset-0 rounded-2xl
               bg-gradient-to-r from-pink-500 to-blue-500
@@ -91,9 +111,9 @@ export default function TechnicalSkills() {
               text-gray-800 dark:text-gray-200">
               {skill.name}
             </p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

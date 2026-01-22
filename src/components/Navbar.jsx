@@ -5,11 +5,20 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 
 export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
   const [open, setOpen] = useState(false);
 
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", darkMode);
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
   }, [darkMode]);
 
   const linkClass = ({ isActive }) =>
@@ -22,7 +31,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md">
         <div className="h-20 px-6 flex justify-between items-center max-w-7xl mx-auto">
 
@@ -36,36 +44,25 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <NavLink to="/" className={linkClass}>Home</NavLink>
+            <NavLink to="/" end className={linkClass}>Home</NavLink>
             <NavLink to="/about" className={linkClass}>About</NavLink>
-            <NavLink to="/technicalSkills" className={linkClass}>Skills</NavLink>
+            <NavLink to="/skills" className={linkClass}>Skills</NavLink>
             <NavLink to="/projects" className={linkClass}>Projects</NavLink>
             <NavLink to="/contact" className={linkClass}>Contact</NavLink>
 
-            {/* Dark Mode Icon Button */}
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="w-11 h-11 flex items-center justify-center rounded-xl
-                          dark:bg-gray-800
-                          dark:hover:bg-pink-900
-                         transition"
+                         dark:bg-gray-800 dark:hover:bg-pink-900 transition"
             >
-              {darkMode ? (
-                <FaSun className="text-yellow-400 text-lg" />
-              ) : (
-                <FaMoon className="text-gray-700 text-lg" />
-              )}
+              {darkMode ? <FaSun className="text-yellow-400" /> : <FaMoon />}
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <div className="md:hidden">
             <button onClick={() => setOpen(!open)}>
-              {open ? (
-                <HiX className="w-9 h-9 text-gray-800 dark:text-gray-200" />
-              ) : (
-                <HiMenu className="w-9 h-9 text-gray-800 dark:text-gray-200" />
-              )}
+              {open ? <HiX className="w-9 h-9" /> : <HiMenu className="w-9 h-9" />}
             </button>
           </div>
         </div>
@@ -73,20 +70,18 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {open && (
           <div className="md:hidden bg-white dark:bg-gray-900 px-6 py-6 flex flex-col gap-6 shadow-lg">
-            <NavLink onClick={() => setOpen(false)} to="/" className={linkClass}>Home</NavLink>
+            <NavLink onClick={() => setOpen(false)} to="/" end className={linkClass}>Home</NavLink>
             <NavLink onClick={() => setOpen(false)} to="/about" className={linkClass}>About</NavLink>
-            <NavLink onClick={() => setOpen(false)} to="/technicalSkills" className={linkClass}>Skills</NavLink>
+            <NavLink onClick={() => setOpen(false)} to="/skills" className={linkClass}>Skills</NavLink>
             <NavLink onClick={() => setOpen(false)} to="/projects" className={linkClass}>Projects</NavLink>
             <NavLink onClick={() => setOpen(false)} to="/contact" className={linkClass}>Contact</NavLink>
 
-            {/* Mobile Dark Icon */}
             <button
               onClick={() => {
                 setDarkMode(!darkMode);
                 setOpen(false);
               }}
-              className="w-12 h-12 flex items-center justify-center rounded-xl
-                         bg-gray-200 dark:bg-gray-800 self-start"
+              className="w-12 h-12 rounded-xl bg-gray-200 dark:bg-gray-800"
             >
               {darkMode ? <FaSun className="text-yellow-400" /> : <FaMoon />}
             </button>
@@ -94,8 +89,7 @@ export default function Navbar() {
         )}
       </nav>
 
-      {/* Spacer */}
-      <div className="h-20"></div>
+      <div className="h-20" />
     </>
   );
 }
