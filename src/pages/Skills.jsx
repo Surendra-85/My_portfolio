@@ -2,7 +2,7 @@ export default function TechnicalSkills() {
   const skills = [
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
-    { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+    { name: "Java Script", icon: <SiJavascript className="text-yellow-400" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
     { name: "React.js", icon: <FaReact className="text-sky-400" /> },
     { name: "Redux Toolkit", icon: <SiRedux className="text-purple-500" /> },
@@ -10,13 +10,13 @@ export default function TechnicalSkills() {
     { name: "Framer Motion", icon: <SiFramer className="text-pink-500" /> },
 
     { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-    { name: "Express.js", icon: <SiExpress className="text-gray-800 dark:text-gray-200" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-green-600" /> },
+    { name: "Express", icon: <SiExpress className="text-gray-800 dark:text-gray-200" /> },
+    { name: "Mongo DB", icon: <SiMongodb className="text-green-600" /> },
     { name: "REST API", icon: <FaCode className="text-indigo-500" /> },
     { name: "JWT Auth", icon: <SiJsonwebtokens className="text-red-500" /> },
 
     { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
-    { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-800" /> },
+    { name: "Postgre SQL", icon: <SiPostgresql className="text-blue-800" /> },
 
     { name: "Java", icon: <FaJava className="text-red-500" /> },
     { name: "Spring Boot", icon: <SiSpringboot className="text-green-600" /> },
