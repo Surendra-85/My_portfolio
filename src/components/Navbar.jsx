@@ -36,7 +36,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <div className="flex items-center gap-3 cursor-pointer">
-            <img src={Logo} alt="Logo" className="w-12 h-12" />
+            <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
             <span className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
               Surendra
             </span>
