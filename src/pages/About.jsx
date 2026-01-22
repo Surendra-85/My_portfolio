@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    period: "SEPT 2024 – PRESENT",
+    period: "SEPT 2023 – PRESENT",
     role: "Full Stack Developer",
+    company: "Coding Pvt. Ltd.",
     points: [
       "Contributed to complex web and mobile apps using React.js, Next.js, React Native, and Flutter.",
       "Notable projects include Jane CJ and Coding World.",
@@ -13,8 +14,9 @@ const experiences = [
     ],
   },
   {
-    period: "FEB 2024 – AUG 2025",
+    period: "FEB 2023 – AUG 2023",
     role: "Full Stack Developer Intern",
+    company: "Codbig Pvt. Ltd.",
     points: [
       "Developed full-stack web applications using the MERN stack.",
       "Built responsive frontends with React.js and Tailwind CSS.",
@@ -79,7 +81,9 @@ export default function About() {
                   {exp.role}
                 </h3>
 
-                
+                <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-5">
+                  {exp.company}
+                </p>
 
                 <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-300">
                   {exp.points.map((point, i) => (
