@@ -1,3 +1,31 @@
+
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaGithub,
+  FaJava,
+  FaNodeJs,
+  FaCode,
+} from "react-icons/fa";
+
+import {
+  SiJavascript,
+  SiTailwindcss,
+  SiRedux,
+  SiGreensock,
+  SiFramer,
+  SiExpress,
+  SiMongodb,
+  SiJsonwebtokens,
+  SiMysql,
+  SiPostgresql,
+  SiSpringboot,
+  SiPostman,
+  SiNpm,
+  SiIntellijidea,
+} from "react-icons/si";
+
 export default function TechnicalSkills() {
   const skills = [
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
