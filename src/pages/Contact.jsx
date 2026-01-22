@@ -70,7 +70,7 @@ className="w-85 h-75 object-cover rounded-xl shadow- ml-0 md:ml-1 lg:ml-12"
 {/* Email */}
 <div
   className="group flex items-center gap-3 flex-1 px-3 py-2 rounded-xl 
-    bg-purple-500 hover:to-indigo-500 border border-gray-100
+   bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:to-indigo-500 border border-gray-100
     hover:border-transparent
     hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-500
     transition-all duration-300"
@@ -95,9 +95,9 @@ className="w-85 h-75 object-cover rounded-xl shadow- ml-0 md:ml-1 lg:ml-12"
 {/* Phone */}
 <div
   className="group flex items-center gap-3 flex-1 px-3 py-2 rounded-xl
-    bg-purple-500 hover:to-indigo-500 border border-gray-100
+    bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:to-indigo-500 border border-gray-100
     hover:border-transparent
-    hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-500
+    
     transition-all duration-300"
 >
   <div
@@ -183,9 +183,9 @@ className="w-85 h-75 object-cover rounded-xl shadow- ml-0 md:ml-1 lg:ml-12"
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-500 to-indigo-500
+              className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500
                 text-white py-3 rounded-xl font-semibold text-lg
-                hover:opacity-90 transition"
+                hover: opacity-90 transition"
             >
               Send Message
             </button>
