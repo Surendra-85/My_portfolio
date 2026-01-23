@@ -5,8 +5,8 @@ import {
   FaUser,
   FaRegCommentDots,
 } from "react-icons/fa";
-import Hero from '../assets/Photo5.png'
-import Logo from '../assets/logo.png'
+import Logo from "../assets/logo.png";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -25,108 +25,80 @@ export default function Contact() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-white to-white py-20">
+    <section className="py-20
+      bg-gradient-to-b from-white to-white
+      dark:from-gray-900 dark:to-gray-900">
+
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-extrabold text-center
-          text-black">
+          text-black dark:text-white">
           Get In Touch
         </h2>
 
-        <p className="text-center text-gray-500 mt-4 max-w-2xl mx-auto">
+        <p className="text-center text-gray-500 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
           Have a project in mind or just want to say hello?
         </p>
 
         <div className="mt-16 grid md:grid-cols-2 gap-12 items-stretch">
           {/* LEFT CARD */}
-          <div className="bg-white rounded-3xl shadow-lg p-8
-            hover:shadow-2xl transition-all duration-300 flex flex-col">
+          <div className="rounded-3xl shadow-lg p-8 flex flex-col
+            bg-white dark:bg-gray-800
+            hover:shadow-2xl transition-all duration-300">
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            <h3 className="text-2xl font-semibold mb-4
+              text-gray-800 dark:text-white">
               Contact Information
             </h3>
 
-            <p className="text-gray-500 mb-5 text-sm leading-relaxed">
-  Available for freelance projects and full-time roles.
-  Let’s collaborate and build impactful digital experiences.
-</p>
+            <p className="text-gray-500 dark:text-gray-400 mb-5 text-sm">
+              Available for freelance projects and full-time roles.
+              Let’s collaborate and build impactful digital experiences.
+            </p>
 
+            <div className="mb-8">
+              <img
+                src={Logo}
+                alt="Contact"
+                className="w-72 object-cover rounded-xl   lg:ml-16"
+              />
+            </div>
 
-            {/* Poster */}
-            {/* Poster */}
-<div className="mb-8">
-  <img
-    src={Logo}
-    alt="Contact"
-className="w-85 h-75 object-cover rounded-xl shadow- ml-0 md:ml-1 lg:ml-12"
-  />
-</div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              {/* Email */}
+              <div className="flex items-center gap-3 px-3 py-2 rounded-xl
+                bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
 
+                <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center">
+                  <FaEnvelope className="text-purple-600" />
+                </div>
 
-            {/* Contact Details */}
-            {/* Contact Details */}
-            <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                <span className="text-white text-sm break-all">
+                  skbmzp365@gmail.com
+                </span>
+              </div>
 
-{/* Email */}
-<div
-  className="group flex items-center gap-3 flex-1 px-3 py-2 rounded-xl 
-   bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:to-indigo-500 border border-gray-100
-    hover:border-transparent
-    hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-500
-    transition-all duration-300"
->
-  <div
-    className="w-9 h-9 rounded-lg bg-purple-100
-      flex items-center justify-center
-      text-purple-600 text-sm
-      group-hover:bg-white transition"
-  >
-    <FaEnvelope />
-  </div>
+              {/* Phone */}
+              <div className="flex items-center gap-3 px-3 py-2 rounded-xl
+                bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
 
-  <span
-    className="text-gray-700 font-medium text-xs break-all
-      group-hover:text-white transition text-white"
-  >
-    skbmzp365@gmail.com
-  </span>
-</div>
+                <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center">
+                  <FaPhone className="text-purple-600" />
+                </div>
 
-{/* Phone */}
-<div
-  className="group flex items-center gap-3 flex-1 px-3 py-2 rounded-xl
-    bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:to-indigo-500 border border-gray-100
-    hover:border-transparent
-    
-    transition-all duration-300"
->
-  <div
-    className="w-9 h-9 rounded-lg bg-purple-100
-      flex items-center justify-center
-      text-purple-600 text-sm
-      group-hover:bg-white transition"
-  >
-    <FaPhone />
-  </div>
-
-  <span
-    className="text-gray-700 font-medium text-xs
-      group-hover:text-white transition text-white"
-  >
-    +91 81279 38279
-  </span>
-</div>
-
-</div>
-
-
+                <span className="text-white text-sm">
+                  +91 81279 38279
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* RIGHT FORM */}
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-3xl shadow-lg p-8
-              hover:shadow-2xl transition-all duration-300 space-y-5"
+            className="rounded-3xl shadow-lg p-8 space-y-5
+              bg-white dark:bg-gray-800
+              hover:shadow-2xl transition-all duration-300"
           >
             <div className="grid md:grid-cols-2 gap-4">
               <div className="relative">
@@ -137,7 +109,10 @@ className="w-85 h-75 object-cover rounded-xl shadow- ml-0 md:ml-1 lg:ml-12"
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="pl-11 border border-gray-300 rounded-xl p-3 w-full
+                  className="pl-11 p-3 w-full rounded-xl
+                    bg-white dark:bg-gray-700
+                    text-black dark:text-white
+                    border border-gray-300 dark:border-gray-600
                     focus:ring-2 focus:ring-purple-400 outline-none"
                   required
                 />
@@ -151,7 +126,10 @@ className="w-85 h-75 object-cover rounded-xl shadow- ml-0 md:ml-1 lg:ml-12"
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your Email"
-                  className="pl-11 border border-gray-300 rounded-xl p-3 w-full
+                  className="pl-11 p-3 w-full rounded-xl
+                    bg-white dark:bg-gray-700
+                    text-black dark:text-white
+                    border border-gray-300 dark:border-gray-600
                     focus:ring-2 focus:ring-purple-400 outline-none"
                   required
                 />
@@ -164,7 +142,10 @@ className="w-85 h-75 object-cover rounded-xl shadow- ml-0 md:ml-1 lg:ml-12"
               value={formData.subject}
               onChange={handleChange}
               placeholder="Subject"
-              className="border border-gray-300 rounded-xl p-3 w-full
+              className="p-3 w-full rounded-xl
+                bg-white dark:bg-gray-700
+                text-black dark:text-white
+                border border-gray-300 dark:border-gray-600
                 focus:ring-2 focus:ring-purple-400 outline-none"
             />
 
@@ -175,17 +156,20 @@ className="w-85 h-75 object-cover rounded-xl shadow- ml-0 md:ml-1 lg:ml-12"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Tell me about your project..."
-                className="pl-11 border border-gray-300 rounded-xl p-3 w-full h-36
-                  resize-none focus:ring-2 focus:ring-purple-400 outline-none"
+                className="pl-11 p-3 w-full h-36 resize-none rounded-xl
+                  bg-white dark:bg-gray-700
+                  text-black dark:text-white
+                  border border-gray-300 dark:border-gray-600
+                  focus:ring-2 focus:ring-purple-400 outline-none"
                 required
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500
-                text-white py-3 rounded-xl font-semibold text-lg
-                hover: opacity-90 transition"
+              className="w-full py-3 rounded-xl font-semibold text-lg
+                bg-gradient-to-r from-purple-500 via-pink-500 to-red-500
+                text-white hover:opacity-90 transition"
             >
               Send Message
             </button>
