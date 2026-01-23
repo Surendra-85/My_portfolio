@@ -26,7 +26,7 @@ export default function Contact() {
 
   return (
     <section className="py-20
-      bg-gradient-to-b from-white to-white
+      bg-gradient-to-b from to-white
       dark:from-gray-900 dark:to-gray-900">
 
       <div className="max-w-6xl mx-auto px-6">
