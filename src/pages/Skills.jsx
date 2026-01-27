@@ -53,12 +53,11 @@ export default function Skills() {
     <section className="py-28 bg-gradient-to-b from-white to-slate-50 dark:from-gray-950 dark:to-gray-900">
       
       {/* Heading */}
-      <div className="text-center mb-20">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+      <div className="mb-20 text-center">
+        <h2 className="font-serif text-4xl font-extrabold text-gray-700 md:text-5xl dark:text-white">
           Technical Skills
         </h2>
-        <div className="mt-4 w-24 h-1 mx-auto rounded-full
-          bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500" />
+        <div className="w-24 h-1 mx-auto mt-4 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500" />
       </div>
 
       {/* Skills Grid */}
@@ -72,9 +71,7 @@ export default function Skills() {
             transition: { staggerChildren: 0.08 },
           },
         }}
-        className="max-w-6xl mx-auto
-        grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
-        gap-8 px-6"
+        className="grid max-w-6xl grid-cols-1 gap-8 px-6 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
       >
         {skills.map((skill, index) => (
           <motion.div
@@ -85,30 +82,17 @@ export default function Skills() {
             }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             whileHover={{ scale: 1.03 }}
-            className="group relative flex items-center gap-4
-            rounded-2xl p-6
-            bg-white/80 dark:bg-gray-800/70
-            backdrop-blur-xl
-            border border-gray-200 dark:border-gray-700
-            shadow-md hover:shadow-xl
-            transition-all duration-300"
+            className="relative flex items-center gap-4 p-6 transition-all duration-300 border border-gray-200 shadow-md group rounded-2xl bg-white/80 dark:bg-gray-800/70 backdrop-blur-xl dark:border-gray-700 hover:shadow-xl"
           >
-            {/* Glow */}
             <div
-              className="absolute inset-0 rounded-2xl
-              bg-gradient-to-r from-pink-500 to-blue-500
-              opacity-0 group-hover:opacity-15 blur-xl transition"
+              className="absolute inset-0 transition opacity-0 rounded-2xl bg-gradient-to-r from-pink-500 to-blue-500 group-hover:opacity-15 blur-xl"
             />
 
-            {/* Icon */}
-            <div className="text-4xl md:text-5xl flex-shrink-0
-              group-hover:scale-110 transition-transform duration-300">
+            <div className="flex-shrink-0 text-4xl transition-transform duration-300 md:text-5xl group-hover:scale-110">
               {skill.icon}
             </div>
 
-            {/* Name */}
-            <p className="text-base md:text-lg font-semibold
-              text-gray-800 dark:text-gray-200">
+            <p className="text-base font-semibold text-gray-800 md:text-lg dark:text-gray-200">
               {skill.name}
             </p>
           </motion.div>

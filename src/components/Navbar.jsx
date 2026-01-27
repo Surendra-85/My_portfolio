@@ -31,19 +31,19 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md">
-        <div className="h-20 px-6 flex justify-between items-center max-w-7xl mx-auto">
+      <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md dark:bg-gray-900">
+        <div className="flex items-center justify-between h-20 px-6 mx-auto max-w-7xl">
 
           {/* Logo */}
           <div className="flex items-center gap-3 cursor-pointer">
             <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
-            <span className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+            <span className="text-2xl font-extrabold text-transparent md:text-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text">
               Surendra
             </span>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="items-center hidden gap-8 md:flex">
             <NavLink to="/" end className={linkClass}>Home</NavLink>
             <NavLink to="/about" className={linkClass}>About</NavLink>
             <NavLink to="/skills" className={linkClass}>Skills</NavLink>
@@ -52,8 +52,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="w-11 h-11 flex items-center justify-center rounded-xl
-                         dark:bg-gray-800 dark:hover:bg-pink-900 transition"
+              className="flex items-center justify-center transition w-11 h-11 rounded-xl dark:bg-gray-800 dark:hover:bg-pink-900"
             >
               {darkMode ? <FaSun className="text-yellow-400" /> : <FaMoon />}
             </button>
@@ -69,7 +68,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden bg-white dark:bg-gray-900 px-6 py-6 flex flex-col gap-6 shadow-lg">
+          <div className="flex flex-col gap-6 px-6 py-6 bg-white shadow-lg md:hidden dark:bg-gray-900">
             <NavLink onClick={() => setOpen(false)} to="/" end className={linkClass}>Home</NavLink>
             <NavLink onClick={() => setOpen(false)} to="/about" className={linkClass}>About</NavLink>
             <NavLink onClick={() => setOpen(false)} to="/skills" className={linkClass}>Skills</NavLink>
@@ -81,7 +80,7 @@ export default function Navbar() {
                 setDarkMode(!darkMode);
                 setOpen(false);
               }}
-              className="w-12 h-12 rounded-xl bg-gray-200 dark:bg-gray-800"
+              className="w-12 h-12 bg-gray-200 rounded-xl dark:bg-gray-800"
             >
               {darkMode ? <FaSun className="text-yellow-400" /> : <FaMoon />}
             </button>

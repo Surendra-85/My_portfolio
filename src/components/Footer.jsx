@@ -7,23 +7,18 @@ export default function Footer() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white dark:bg-gray-900 
-                 border-t border-gray-200 dark:border-gray-700"
+      className="bg-white border-t border-gray-200 dark:bg-gray-900 dark:border-gray-700"
     >
       <div
-        className="max-w-7xl mx-auto px-6 py-7
-                   flex flex-col md:flex-row
-                   items-center justify-between gap-6"
+        className="flex flex-col items-center justify-between gap-6 px-6 mx-auto max-w-7xl py-7 md:flex-row"
       >
-        {/* Logo / Title */}
+        {/* Logo */}
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="group cursor-pointer text-center md:text-left"
+          className="text-center cursor-pointer group md:text-left"
         >
           <h2
-            className="text-2xl md:text-3xl font-extrabold
-                       bg-gradient-to-r from-purple-500 via-pink-500 to-red-500
-                       bg-clip-text text-transparent tracking-wide"
+            className="text-2xl font-extrabold tracking-wide text-transparent md:text-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text"
           >
             Portfolio
           </h2>
@@ -35,34 +30,70 @@ export default function Footer() {
           />
         </motion.div>
 
-        {/* Social Icons */}
-        <div className="flex items-center gap-4">
-          {[FaInstagram, FaFacebookF, FaGithub, FaLinkedinIn].map((Icon, i) => (
-            <motion.a
-              key={i}
-              whileHover={{ scale: 1.12 }}
-              whileTap={{ scale: 0.95 }}
-              className="p-[2px] rounded-full
-                         bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"
-            >
-              <span
-                className="w-10 h-10 flex items-center justify-center
-                           rounded-full
-                           bg-white dark:bg-gray-800
-                           text-gray-600 dark:text-gray-300
-                           hover:text-pink-500 dark:hover:text-pink-400
-                           transition-colors"
-              >
-                <Icon size={18} />
-              </span>
-            </motion.a>
-          ))}
-        </div>
+        
+{/* Social Icons */}
+<div className="flex items-center gap-4">
+  <motion.a
+    href="https://www.instagram.com/your_username"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.12 }}
+    whileTap={{ scale: 0.95 }}
+    className="p-[2px] rounded-full
+               bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"
+  >
+    <span className="flex items-center justify-center w-10 h-10 text-gray-600 transition-colors bg-white rounded-full dark:bg-gray-800 dark:text-gray-300 hover:text-pink-500">
+      <FaInstagram size={18} />
+    </span>
+  </motion.a>
+
+  <motion.a
+    href="https://www.facebook.com/your_username"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.12 }}
+    whileTap={{ scale: 0.95 }}
+    className="p-[2px] rounded-full
+               bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"
+  >
+    <span className="flex items-center justify-center w-10 h-10 bg-white rounded-full dark:bg-gray-800">
+      <FaFacebookF size={18} />
+    </span>
+  </motion.a>
+
+  <motion.a
+    href="https://github.com/Codingstar365"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.12 }}
+    whileTap={{ scale: 0.95 }}
+    className="p-[2px] rounded-full
+               bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"
+  >
+    <span className="flex items-center justify-center w-10 h-10 bg-white rounded-full dark:bg-gray-800">
+      <FaGithub size={18} />
+    </span>
+  </motion.a>
+
+  <motion.a
+    href="https://www.linkedin.com/in/surendra-8a6334378/"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.12 }}
+    whileTap={{ scale: 0.95 }}
+    className="p-[2px] rounded-full
+               bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"
+  >
+    <span className="flex items-center justify-center w-10 h-10 bg-white rounded-full dark:bg-gray-800">
+      <FaLinkedinIn size={18} />
+    </span>
+  </motion.a>
+</div>
 
         {/* Copyright */}
-        <p className="text-base text-gray-500 dark:text-gray-400 text-center md:text-right">
+        <p className="text-base text-center text-gray-500 dark:text-gray-400 md:text-right">
           © 2026{" "}
-          <span className="text-pink-500 font-semibold">
+          <span className="font-semibold text-pink-500">
             Surendra
           </span>
           . All Rights Reserved.

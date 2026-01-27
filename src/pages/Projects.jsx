@@ -4,51 +4,51 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const projects = [
     {
-      title: "Jane CJ App (User Platform)",
+      title: "Online Ecommerces Website",
       year: "2025",
-      desc: "A cross-platform mobile app for the US market allowing users to record, upload, and monetize video content.",
-      tags: ["Flutter", "BLoC", "Node.js", "REST API"],
+      desc: "Built a full-stack MERN e-commerce application for product browsing, cart management, and secure online ordering.",
+      tags: ["React.js", "Node.js", "REST API" ,"Material UI ", "MongoDB" ],
       demo: "#",
       code: "#",
     },
     {
-      title: "Jane CJ Media App",
-      year: "2025",
-      desc: "News channel platform for agencies to browse and license user-uploaded content with secure licensing workflows.",
-      tags: ["Flutter", "BLoC", "Node.js", "Android / iOS"],
-      demo: "#",
+      title: "Robo_Mart",
+      year: "2026",
+      desc: "Robo_Mart is an Electron-powered desktop e-commerce website focused on performance and usability.",
+      tags: ["React.js",  "Node.js" ,"Tailwind CSS", "Material UI ", ],
+      demo: "https://robo-ecommerce-shop.vercel.app/",
       code: "#",
     },
     {
-      title: "The 8th Element Website",
-      year: "2024",
-      desc: "Responsive business website for a US-based healthcare consulting firm with SEO optimization.",
-      tags: ["React.js", "Tailwind CSS", "SEO"],
-      demo: "#",
+      title: "Dashboard_Online_Shop",
+      year: "2026",
+      desc: "Dashboard_Online_Shop is a responsive admin dashboard for managing products, orders, customers, and sales data of an online store.",
+      tags: ["React.js", "Tailwind CSS", "Material UI "],
+      demo: "https://dashboard-online-shop-phi.vercel.app/",
       code: "#",
     },
     {
       title: "Portfolio Website",
-      year: "2024",
+      year: "2026",
       desc: "Personal portfolio site showcasing projects, blogs, and skills with smooth animations.",
       tags: ["React.js", "Tailwind CSS", "Framer Motion"],
+      demo: "https://my-portfolio-drab-alpha-44.vercel.app/",
+      code: "#",
+    },
+    {
+      title: "Book My Room",
+      year: "2024",
+      desc: "Book My Room is an online platform that allows users to easily search, view, and book rooms with a simple and user-friendly interface..",
+      tags: ["Java", "MySql", "Css", "Html" ,"Bootstrap"],
       demo: "#",
       code: "#",
     },
     {
-      title: "E-Commerce Platform",
-      year: "2023",
-      desc: "Fully functional e-commerce website with cart, payment gateway integration, and admin dashboard.",
-      tags: ["React.js", "Node.js", "MongoDB", "Stripe API"],
-      demo: "#",
-      code: "#",
-    },
-    {
-      title: "Blog CMS",
-      year: "2023",
-      desc: "Content management system for bloggers with rich text editor and SEO-friendly design.",
-      tags: ["Next.js", "Tailwind CSS", "MongoDB"],
-      demo: "#",
+      title: "Bur_Ger_Project",
+      year: "2025",
+      desc: "Bur_Ger_Project is a responsive frontend landing page for a burger restaurant with a clean and modern UI.",
+      tags: [  "Html","Tailwind CSS",  "JavaScript"],
+      demo: "https://bur-ger-project.vercel.app/",
       code: "#",
     },
   ];
@@ -59,15 +59,15 @@ export default function Projects() {
       className="relative pt-36 pb-28 bg-gradient-to-b from to-white dark:from-gray-950 dark:to-gray-900"
     >
       {/* Heading */}
-      <div className="text-center mb-20">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+      <div className="mb-20 text-center">
+        <h2 className="font-serif text-4xl font-extrabold text-gray-700 md:text-5xl dark:text-white">
           Featured Projects
         </h2>
         <div className="w-24 h-1.5 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 mx-auto mt-4 rounded-full" />
       </div>
 
       {/* Grid */}
-      <div className="max-w-7xl mx-auto grid gap-12 px-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-12 px-6 mx-auto max-w-7xl sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (
           <motion.div
           key={i}
@@ -79,29 +79,23 @@ export default function Projects() {
         >
           {/* Inner Card */}
           <div
-            className="relative rounded-3xl p-8 h-full overflow-hidden
-            bg-white dark:bg-gray-900 backdrop-blur-xl
-            shadow-lg dark:shadow-xl
-            hover:shadow-2xl dark:hover:shadow-2xl
-            transition-all duration-500"
+            className="relative h-full p-8 overflow-hidden transition-all duration-500 bg-white shadow-lg rounded-3xl dark:bg-gray-900 backdrop-blur-xl dark:shadow-xl hover:shadow-2xl dark:hover:shadow-2xl"
           >
             {/* Top colored strip (FIXED) */}
-            <div className="absolute top-0 left-0 w-full h-2
-              bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500" />
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500" />
         
             {/* Year Badge */}
-            <span className="absolute top-6 right-5 text-xs font-bold px-3 py-1 rounded-full
-              bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 text-white shadow-sm">
+            <span className="absolute px-3 py-1 text-xs font-bold text-white rounded-full shadow-sm top-6 right-5 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500">
               {p.year}
             </span>
         
             {/* Title */}
-            <h3 className="text-xl font-extrabold text-gray-900 dark:text-white mb-4 mt-2">
+            <h3 className="mt-2 mb-4 text-xl font-bold text-gray-900 dark:text-white">
               {p.title}
             </h3>
         
             {/* Description */}
-            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+            <p className="mb-6 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
               {p.desc}
             </p>
         
@@ -110,9 +104,7 @@ export default function Projects() {
               {p.tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="text-xs font-semibold px-3 py-1 rounded-full
-                  
-                  text-black-700 dark:text-purple-200 shadow-sm"
+                  className="px-3 py-1 text-xs font-semibold rounded-full shadow-sm text-black-700 dark:text-purple-200"
                 >
                   {tag}
                 </span>
@@ -120,14 +112,12 @@ export default function Projects() {
             </div>
         
             {/* Buttons */}
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex flex-wrap gap-4">
               <a
                 href={p.demo}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold
-                bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 text-white
-                hover:opacity-90 transition"
+                className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white transition rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 hover:opacity-90"
               >
                 <ExternalLink size={16} />
                 Live Demo
@@ -137,10 +127,7 @@ export default function Projects() {
                 href={p.code}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold
-                border border-gray-300 dark:border-gray-700
-                text-gray-800 dark:text-gray-200
-                hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-gray-800 transition border border-gray-300 rounded-full dark:border-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 <Github size={16} />
                 Code
