@@ -85,7 +85,7 @@ export default function Hero() {
 
           <div className="flex flex-col justify-center gap-4 mt-10 sm:flex-row md:justify-start">
             <a
-              href="/Surendra2_Resume.pdf"
+              href="/Surendra_Resume.pdf"
               className="px-8 py-3 font-semibold text-white transition rounded-xl bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:scale-105"
             >
               Download Resume
